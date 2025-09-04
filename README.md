@@ -9,7 +9,19 @@ Spring Boot app for the Bajaj Finserv Health JAVA challenge.
 
 ## Registration Logic
 - REG12333 → odd → Question 1  
-- Q1: Highest salary not paid on 1st day of month  
+- Q1: Highest salary not paid on 1st day of month
+## SQL Query
+  SELECT p.AMOUNT AS SALARY, 
+       CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS NAME,
+       TIMESTAMPDIFF(YEAR, e.DOB, DATE(p.PAYMENT_TIME)) AS AGE,
+       d.DEPARTMENT_NAME
+FROM PAYMENTS p
+JOIN EMPLOYEE e ON p.EMP_ID = e.EMP_ID
+JOIN DEPARTMENT d ON e.DEPARTMENT = d.DEPARTMENT_ID
+WHERE DAY(p.PAYMENT_TIME) <> 1
+ORDER BY p.AMOUNT DESC
+LIMIT 1;
+
 
 ## Build & Run
 ```bash
