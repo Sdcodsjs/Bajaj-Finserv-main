@@ -12,7 +12,7 @@ Spring Boot app for the Bajaj Finserv Health JAVA challenge.
 - Q1: Highest salary not paid on 1st day of month
 ## SQL Query
  (Question 1):
-```bash
+```sql
   SELECT p.AMOUNT AS SALARY, 
        CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS NAME,
        TIMESTAMPDIFF(YEAR, e.DOB, DATE(p.PAYMENT_TIME)) AS AGE,
