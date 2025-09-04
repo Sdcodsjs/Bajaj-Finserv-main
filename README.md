@@ -8,7 +8,7 @@ Spring Boot app for the Bajaj Finserv Health JAVA challenge.
 - Submits solution using JWT access token  
 
 ## Registration Logic
-- REG12333 → odd → Question 1  
+- REG123 → odd → Question 1  
 - Q1: Highest salary not paid on 1st day of month
 ## SQL Query
  (Question 1):
